@@ -33,7 +33,7 @@ function addZero(n) {
 function setBackgroundGreeting() {
   let hour = new Date().getHours();
 
-  if (hour > 12) {
+  if (hour < 5) {
     // Morning
     document.body.style.backgroundImage = "url('./images/morning.jpg')";
     greeting.textContent = "Good Morning";
