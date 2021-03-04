@@ -33,7 +33,7 @@ function addZero(n) {
 function setBackgroundGreeting() {
   let hour = new Date().getHours();
 
-  if (hour < 5) {
+  if (hour < 10) {
     // Morning
     document.body.style.backgroundImage = "url('./images/morning.jpg')";
     greeting.textContent = "Good Morning";
@@ -41,12 +41,10 @@ function setBackgroundGreeting() {
     // Afternoon
     document.body.style.backgroundImage = "url('./images/afternoon.jpg')";
     greeting.textContent = "Good Afternoon";
-    document.body.style.color = "white";
   } else {
     // Evening
     document.body.style.backgroundImage = "url('./images/evening.jpg')";
     greeting.textContent = "Good Evening";
-    document.body.style.color = "white";
   }
 }
 
@@ -92,6 +90,13 @@ function setFocus(e) {
   } else {
     localStorage.setItem("focus", e.target.innerText);
   }
+}
+
+// Change the title dynamicly based if there is a user already in the local storage
+if (localStorage.getItem("name") !== null) {
+  document.title = `Welcome ${localStorage.getItem("name")}!`;
+} else {
+  document.title = `Welcome guest!`;
 }
 
 name.addEventListener("keypress", setName);

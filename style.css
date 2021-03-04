@@ -12,15 +12,17 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
-  color: orange;
+  color: white;
+  background-image: contain;
 }
 
 #time {
-  font-size: 8rem;
+  font-size: 10rem;
 }
 
 h1 {
   margin-bottom: 3rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -32,4 +34,18 @@ h2 {
   #time {
     font-size: 6rem;
   }
+}
+
+#focus {
+  color: white;
+  opacity: 1;
+}
+
+#name {
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 40px;
+  width: 40%;
 }
